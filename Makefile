@@ -6,3 +6,8 @@ default:
 
 clean:
 	rm led.bin led.hex led.o
+
+# install-dependencies only works for debian based distros since it
+# uses apt
+install-dependencies:
+	sudo apt install gcc-arv avr-libc avrdude binutils-avr
