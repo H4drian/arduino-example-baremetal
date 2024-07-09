@@ -3,3 +3,6 @@ default:
 	avr-gcc -o led.bin led.o
 	avr-objcopy -O ihex -R .eeprom led.bin led.hex
 	sudo avrdude -F -V -c arduino -p ATMEGA328P -P /dev/ttyACM0 -b 115200 -U flash:w:led.hex
+
+clean:
+	rm led.bin led.hex led.o
